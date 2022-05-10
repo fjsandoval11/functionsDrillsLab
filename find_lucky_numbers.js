@@ -18,16 +18,15 @@
 
 function randomcolor(g) {
     let array = 'red blue green purple black white yellow'
-    let word = array.split(' ')
+    array = array.split(' ')
     let random = []
 
-    for (let i = 0;i < g; i++) {
-        let x = Math.floor(Math.random * word.length)
-        random.push(word[x])
-        word.splice(x, 1)
-
+    for (let i = 0; i < g; i++) {
+        let x = Math.floor(Math.random() * array.length)
+        random.push(array[x])
+        array.slice(x, 1)
     }
     return random
 }
 
-console.log(randomcolor(1))
+console.log(randomcolor(2))
