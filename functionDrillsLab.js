@@ -172,10 +172,17 @@ function exclaimFour(str) {
 
 
 //CODE HERE
+const nameFormat = (name5) => {
+  name5 = name5.toLowerCase 
+  name5 = name5.charAt(0).toUpperCase() + name5.slice(1)
+  return name5
 
+}
 
 const nameCheck = (name3) => {
-  name3 = name3.charAt(0).toUpperCase() + name3.slice(1)
+
+  name3 = nameFormat(name3)
+
   if (name3 === "Steven") {
     return "what is up steven?"
   } else if (name3 === "Bryan") {
@@ -201,6 +208,9 @@ let nameGreeting = console.log(nameCheck('steven'))
 
 const faveColorFinder = (color) => {
   color = color.toString()
+  color = color.toLowerCase()
+  
+  
   if (color === 'red') {
     return 'red is a great color'
   } else if (color === 'green') {
